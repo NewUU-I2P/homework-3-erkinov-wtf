@@ -2,34 +2,30 @@ float problemSolution1(float consumed_water) {
     float cost;
     // write your code here
 
-    cost = 13; // Fixed amount
-    double remaining = consumed_water;
+    cost = 13;
 
-    if (remaining > 30) {
+    if (consumed_water > 30) {
         cost += 30 * 0.4;
-        remaining -= 30;
+        consumed_water -= 30;
     } else {
-        cost += remaining * 0.4;
-        return cost;
+        cost += consumed_water * 0.4;
     }
 
-    if (remaining > 20) {
+    if (consumed_water > 20) {
         cost += 20 * 0.12;
-        remaining -= 20;
+        consumed_water -= 20;
     } else {
-        cost += remaining * 0.12;
-        return cost;
+        cost += consumed_water * 0.12;
     }
 
-    if (remaining > 10) {
+    if (consumed_water > 10) {
         cost += 10 * 1.4;
-        remaining -= 10;
+        consumed_water -= 10;
     } else {
-        cost += remaining * 1.4;
-        return cost;
+        cost += consumed_water * 1.4;
     }
 
-    cost += remaining * 1.5;
+    cost += consumed_water * 1.5;
 
     return cost;
 }
